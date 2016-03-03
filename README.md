@@ -17,7 +17,7 @@ There should be Lake, Sea and Ocean. In order to resue some bits of code, those 
 AbstractBasin should:
  
 * store name as "name" field and NOT allow sub classes to change it
-* store surrounding basin as "surroundingBasin" field and ALLOW sub classes to change it
+* store surrounding basin as non-public "surroundingBasin" field and ALLOW sub classes to change it
 * have constructor with name
 * have constructor with name and surrounding basin
 * redefine toString method so that when there is no surrounding basin then return "[name] is not part of any larger basin"; 

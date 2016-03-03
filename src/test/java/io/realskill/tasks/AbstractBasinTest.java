@@ -73,4 +73,15 @@ public class AbstractBasinTest {
         //        Then
         assertFalse(result);
     }
+
+    @Test
+    public void surroundingBasinField_mayNotBe_public() throws Exception
+    {
+        //        Given
+        expectedException.expect(NoSuchFieldException.class);
+        expectedException.expectMessage("surroundingBasin");
+
+        //        When
+        AbstractBasin.class.getField("surroundingBasin");
+    }
 }
