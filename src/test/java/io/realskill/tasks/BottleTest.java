@@ -10,7 +10,12 @@ import static org.junit.Assert.*;
 public class BottleTest {
 
     @Test
-    public void deacreseVolume() throws Exception {
-
+    public void should_deacrese_volume_by_given_value() throws Exception {
+        //      Given
+        Bottle bottle = new Bottle(100, 50);
+        //      When
+        bottle.deacreseVolume(50);
+        //      Then
+        assertEquals(50, bottle.getVolume());
     }
 }
